@@ -12,3 +12,9 @@ Web developers
   - Option to add, remove, duplicate or customise specific components.
   - Option to export html/css of a finnished template.
 
+## - FILE STRUCTURE - 
+For now we should only concerne ourselves with the contents of the 'src' folder. I've took the liberty to create couple of subfolders.<br>
+ - containers (All statefull components)
+ - components (All stateless components)
+ - assets (Multimedia)
+ - store (Redux)
