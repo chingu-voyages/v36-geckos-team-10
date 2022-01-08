@@ -10,7 +10,7 @@ Web developers
 ### Use Cases:
   - Template layout custumization with draggable components.
   - Option to add, remove, duplicate or customise specific components.
-  - Option to export html/css of a finnished template.
+  - Option to export html/css of a finished template.
 
 ## - FILE STRUCTURE - 
 For now we should only concerne ourselves with the contents of the 'src' folder. I've took the liberty to create couple of subfolders.<br>

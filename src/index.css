@@ -3,3 +3,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html, body, #root {
+    height: 100%;
+}
+
+/*** WORKSPACE STYLING ***/
+.ws-container {    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: cornsilk;
+}
+.ws-container > * {
+    height: 100%;
+}
+.ws-container .ws-builder {
+    padding: 30px;
+    width: 75vw;
+    background-color: darkkhaki;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+}
+.ws-container .ws-builder .template {    
+    width: 80%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+.ws-container .ws-builder .element {
+    background-color: cornsilk;
+    padding: 50px;
+    border: 3px dashed #666;
+    border-radius: 15px;
+    flex: 1;
+}
+.ws-container .ws-sidebar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

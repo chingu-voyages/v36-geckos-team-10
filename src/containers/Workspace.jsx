@@ -1,10 +1,12 @@
-import React from "react";
+import WsBuilder from "../components/WsBuilder";
+import WsSidebar from "../components/WsSidebar";
 
 const Workspace = (props) => {
     return (
-        <React.Fragment>
-            We Are Live! 😘
-        </React.Fragment>
+        <div className="ws-container">
+            <WsBuilder />
+            <WsSidebar />
+        </div>
     );
 }
 
