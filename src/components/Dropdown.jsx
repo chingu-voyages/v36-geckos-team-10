@@ -1,4 +1,7 @@
-import {useState} from "react"
+import {useState} from "react";
+import { FaAngleUp } from 'react-icons/fa';
+import { FaAngleDown } from 'react-icons/fa'
+import BuilderComponent from "./BuilderComponent";
 
 function Dropdown({title, items = []}, multiSelect = false) {
     const[open, setOpen] = useState(false);
@@ -21,6 +24,7 @@ function Dropdown({title, items = []}, multiSelect = false) {
     function isItemInSelection(item) {
         if (selection.some(current => current.id === item.id)) {
             return true;
+            
         }
         return false;
     }
@@ -38,16 +42,16 @@ function Dropdown({title, items = []}, multiSelect = false) {
                     <p className="dd-header__title--bold">{title}</p>
                 </div>
                 <div className="dd-header__action">
-                    <p>{open ? "Close" : "Open"}</p>
+                    <p>{open ? <FaAngleDown/> : <FaAngleUp/>}</p>
                 </div>
             </div>
             {open && (
                 <ul className="dd-list">
                     {items.map(item => (
-                        <li className="dd-list-item" key={item.id}>
+                        <li className="dd-list-item" key={item.id} >
                             <button type="button" onClick={() => handleOnClick(item)}>
                                 <span>{item.value}</span>
-                                <span>{isItemInSelection(item) && "Component Added"}</span>
+                                <span>{isItemInSelection(item) && item.value}</span>
                             </button>
                         </li>
                     ))}
