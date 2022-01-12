@@ -1,4 +1,4 @@
-import Dropdown from "../sidebar-components/Dropdown"// component that contains workspace sidebar
+import Dropdown from "./Dropdown";
 
 const items = [
     {

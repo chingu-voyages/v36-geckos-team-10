@@ -1,5 +1,4 @@
 import {useState} from "react"
-import onClickOutside from "react-onclickoutside"
 
 function Dropdown({title, items = []}, multiSelect = false) {
     const[open, setOpen] = useState(false);
@@ -61,4 +60,4 @@ const clickOutsideConfig = {
     handleClickOutside: () => Dropdown.handleClickOutside,
 }
 
-export default onClickOutside(Dropdown, clickOutsideConfig)
+export default Dropdown;
