@@ -1,16 +1,15 @@
-import dragula from "react-dragula";
+import dragAndDrop from "../features/dragDrop";
 import { useEffect, useRef } from "react";
 import BuilderComponent from "./BuilderComponent";
 
 // component that contains workspace builder area
 const WsBuilder = () => {
-    const builder = useRef(null)
+    let dragParent = useRef(null);
     useEffect(() => {
-        const drake = dragula([builder.current], {mirrorContainer: document.body});
+        dragAndDrop(dragParent);
     }, []);
-        
     return (
-        <main className="ws-builder" ref={builder}>
+        <main className="ws-builder" ref={dragParent}>
             <BuilderComponent tags="nav"/>
             <BuilderComponent tags='div' numInRow='1' />
             <BuilderComponent tags='div' numInRow='2' />

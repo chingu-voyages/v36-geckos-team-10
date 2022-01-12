@@ -17,7 +17,7 @@ body,
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: cornsilk;
+  background: cornsilk;
 }
 .ws-container > * {
   height: 100vh;
@@ -27,7 +27,7 @@ body,
   overflow-x:hidden;
   padding: 30px;
   width: 75vw;
-  background-color: darkkhaki;
+  background: darkkhaki;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -35,10 +35,31 @@ body,
   gap: 30px;
 }
 .ws-container .ws-builder .template {
-  cursor: grab;
+  cursor: move;
   width: 80%;
   display: flex;
   gap: 30px;
+}
+.ws-container .ws-builder .template.dragging {
+  opacity: .7;
+}
+.ws-container .ws-builder .template.dragging .element {
+  background: repeating-linear-gradient(
+  -55deg,
+  #888,
+  #888 10px,
+  #999 10px,
+  #999 20px
+);
+}
+.ws-container .ws-builder .template:hover > div {
+  background: repeating-linear-gradient(
+  -55deg,
+  #888,
+  #888 10px,
+  #999 10px,
+  #999 20px
+);
 }
 .ws-container .ws-builder .element {
   background-color: cornsilk;
@@ -46,6 +67,7 @@ body,
   border: 3px dashed #666;
   border-radius: 15px;
   flex: 1;
+  user-select: none;
 }
 
 /*=============
