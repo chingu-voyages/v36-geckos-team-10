@@ -56,4 +56,4 @@ function Dropdown({title, items = []}, multiSelect = false) {
     )
 }
 
-export default Dropdown
+export default Dropdown;
