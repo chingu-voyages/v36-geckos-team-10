@@ -1,14 +1,15 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body,
 #root {
-  height: 100vh;
-  overflow: hidden;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /*** 
@@ -17,54 +18,49 @@ WORKSPACE STYLING
 =================
 ***/
 .ws-container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background: cornsilk;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: cornsilk;
 }
-.ws-container > * {
-  height: 100vh;
+
+.ws-container>* {
+    height: 100vh;
 }
+
 .ws-container .ws-builder {
-  overflow-y: auto;
-  overflow-x:hidden;
-  padding: 30px;
-  width: 75vw;
-  background: darkkhaki;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 30px;
+    width: 75vw;
+    background: darkkhaki;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
 }
+
 .ws-container .ws-builder .template {
-  cursor: move;
-  width: 80%;
-  display: flex;
-  gap: 30px;
+    cursor: move;
+    width: 80%;
+    display: flex;
+    gap: 30px;
 }
+
 .ws-container .ws-builder .template.dragging {
-  opacity: .7;
+    opacity: .7;
 }
+
 .ws-container .ws-builder .template.dragging .element {
-  background: repeating-linear-gradient(
-  -55deg,
-  #888,
-  #888 10px,
-  #999 10px,
-  #999 20px
-);
+    background: repeating-linear-gradient( -55deg, #888, #888 10px, #999 10px, #999 20px);
 }
-.ws-container .ws-builder .template:hover > div {
-  background: repeating-linear-gradient(
-  -55deg,
-  #888,
-  #888 10px,
-  #999 10px,
-  #999 20px
-);
+
+.ws-container .ws-builder .template:hover>div {
+    background: repeating-linear-gradient( -55deg, #888, #888 10px, #999 10px, #999 20px);
 }
+
 .ws-container .ws-builder .element {
   background-color: cornsilk;
   padding: 50px;
@@ -81,8 +77,8 @@ WORKSPACE STYLING
 =============
 ***/
 .ws-container .ws-sidebar {
-  flex: 1;
-  overflow: hidden;
+    flex: 1;
+    overflow: hidden;
 }
 .dropdown-wrapper {
   display: flex;
