@@ -16,6 +16,6 @@ Web developers
 For now we should only concerne ourselves with the contents of the 'src' folder. I've took the liberty to create couple of subfolders.<br>
  - containers (All statefull components)
  - components (Stateless components)
- - assets (Multimedia)
+ - assets (Media)
  - store (Redux)
  - features (Additional JS logic)

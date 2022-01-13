@@ -11,7 +11,11 @@ body,
   overflow: hidden;
 }
 
-/*** WORKSPACE STYLING ***/
+/*** 
+=================
+WORKSPACE STYLING
+=================
+***/
 .ws-container {
   height: 100vh;
   display: flex;
@@ -68,54 +72,67 @@ body,
   border-radius: 15px;
   flex: 1;
   user-select: none;
+  text-align: center;
 }
 
-/*=============
-    SideBar
-=============*/
+/***
+=============
+    SIDEBAR
+=============
+***/
 .ws-container .ws-sidebar {
   flex: 1;
   overflow: hidden;
 }
-.dd-wrapper {
+.dropdown-wrapper {
   display: flex;
-  min-height: 38px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
   margin: 30px;
   background-color: #fff;
-  align-items: center;
   border-radius: 5px;
   border: 2px solid grey;
 }
-.dd-wrapper .dd-header {
+.dropdown-wrapper .dropdown-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
-.dd-wrapper .dd-header__title--bold {
-  font-weight: bold;
+.dropdown-wrapper .dropdown-header span {
+  font-size: 2em;
 }
-.dd-wrapper .dd-list {
+.dropdown-wrapper .dropdown-list {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   padding: 0;
   margin: 0;
+  height: 0;
+  opacity: 0;
+  display: none;
+  transition: all .5s ease-out;
   width: 100%;
+  list-style: none;
+  text-transform: uppercase;
 }
-.dd-wrapper .dd-list li {
-  list-style-type: none;
+.dropdown-wrapper .dropdown-toggle {
+  display: block !important;
+  height: fit-content !important;
+  opacity: 1 !important;
 }
-.dd-wrapper .dd-list li:first-of-type > button {
+.dropdown-wrapper .dropdown-list li:first-child {
   border-top: 1px solid #ccc;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-.dd-wrapper .dd-list li:last-of-type > button {
+.dropdown-wrapper .dropdown-list li:last-child {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-.dd-wrapper .dd-list li button {
+.dropdown-wrapper .dropdown-list li {
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -128,8 +145,16 @@ body,
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
-.dd-wrapper .dd-list li button:hover {
+.dropdown-wrapper .dropdown-list li:hover {
   cursor: pointer;
   font-weight: bold;
   background-color: #ccc;
+}
+.hidden {
+  opacity: 0;
+  transition: .5s;
+}
+/* To prevent errors when clicking on the wrong element */
+.clickFix {
+  pointer-events: none;
 }

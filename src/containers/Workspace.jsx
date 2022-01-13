@@ -1,14 +1,22 @@
 import { useState } from "react";
-import WsBuilder from "../components/WsBuilder";
-import WsSidebar from "../components/WsSidebar";
+import WsBuilder from "./WsBuilder";
+import WsSidebar from "./WsSidebar";
 
 const Workspace = (props) => {
-    const blocks = JSON.parse(localStorage.getItem('blocks'));
-    const [buildingBlocks, setBuildingBlocks] = useState(blocks);
+    const [buildingBlocks, setBuildingBlocks] = useState(['nav', 'div', 'div2', 'div3', 'footer']);
+    const addBlocks = (tag, e) => {
+        const temp = [tag];
+        setBuildingBlocks(buildingBlocks.concat([temp]));
+        console.log(e.target)
+        e.target.lastChild.classList.remove('hidden');
+        setTimeout(() => {
+            e.target.lastChild.classList.add('hidden')
+        }, 1500)
+    }
     return (
         <div className="ws-container">
-            <WsBuilder />
-            <WsSidebar />
+            <WsBuilder buildingBlocks={buildingBlocks} />
+            <WsSidebar handleAdd={addBlocks} />
         </div>
     );
 }
