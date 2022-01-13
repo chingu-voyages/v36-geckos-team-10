@@ -15,7 +15,7 @@ const Workspace = (props) => {
     }
     return (
         <div className="ws-container">
-            <WsBuilder buildingBlocks={buildingBlocks} />
+            <WsBuilder buildingBlocks={buildingBlocks} setBuildingBlocks={setBuildingBlocks}/>
             <WsSidebar handleAdd={addBlocks} />
         </div>
     );
