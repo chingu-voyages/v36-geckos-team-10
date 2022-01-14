@@ -3,19 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 html,
 body,
 #root {
-    height: 100vh;    
-    font-family: 'Trirong', serif;
-}
-#appTitle {
-  font-family: 'Lobster', cursive;
-  font-size: 2em;
-  text-align: center;
-  color: #fff;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /*** 
 =================
@@ -173,3 +168,143 @@ UNIVERSAL
 .clickFix {
   pointer-events: none;
 }
+
+/* nav stylying start */
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
+nav .active {
+  border-bottom: 1px solid green;
+}
+
+.brand-name, .landing-nav-item, .btn-create {
+  cursor: pointer;
+}
+.btn-create {
+  padding: .5rem 1rem;
+  font-weight: 800;
+  border-radius: .4rem;
+}
+.landing-nav {
+  padding: 2rem;
+}
+.landing-nav nav {
+  display: flex;
+  padding: 0 10rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing-nav .landing-ul {
+  display: flex;
+}
+
+.landing-nav .landing-nav-item {
+  margin-right: 1rem;
+  font-weight: 500;
+}
+/* nav styling */
+
+/* Landing Hero  */
+
+.hero{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  padding: .5rem;
+  
+}
+.hero .landing-heading-primary {
+  margin-bottom: 2rem;
+}
+.hero .landing-paragraph {
+  text-align: justify;
+}
+
+.hero .landing-paragraph-two {
+  margin-top: 2rem;
+}
+
+
+
+.hero img {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.hero .btn-create {
+  margin-top: 2rem;
+}
+
+/* Landing hero Ends */
+
+
+
+@media screen and (min-width: 760px) {
+  .about-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .features-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .showcase-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero{
+    display: flex;
+    
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding: 0 10rem;
+    column-gap: .8rem;
+  }
+
+  .landing-hero-description, .landing-hero-banner {
+    flex-basis: 40%;
+  }
+
+  .features-container {
+    display: grid;
+    padding: 10rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .landing-pic-grid{
+    padding: 10rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .landing-pic-grid img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 40vh;
+  }
+  
+}
+
+
+
