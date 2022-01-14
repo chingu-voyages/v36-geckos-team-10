@@ -7,7 +7,7 @@ const Workspace = (props) => {
     const addBlocks = (tag, e) => {
         const temp = [tag];
         setBuildingBlocks(buildingBlocks.concat([temp]));
-        console.log(e.target)
+        // Sidebar message
         e.target.lastChild.classList.remove('hidden');
         setTimeout(() => {
             e.target.lastChild.classList.add('hidden')
