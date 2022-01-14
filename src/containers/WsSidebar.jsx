@@ -9,7 +9,7 @@ const WsSidebar = ({handleAdd}) => {
     return (
         <aside className="ws-sidebar">
             <header>
-                <h1>SimpleWebBuilder</h1>
+                <h1 id="appTitle">SimpleWebBuilder</h1>
             </header>
             <div className="dropdown-wrapper">
                 <DropdownHeader title='Common Elements' />

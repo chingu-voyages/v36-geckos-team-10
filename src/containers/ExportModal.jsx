@@ -3,7 +3,7 @@ export const ExportModal= () => {
         <section>
            {/*
             Preview of the template code goes here.
-           */} 
+           */}
         </section>
     );
 }
