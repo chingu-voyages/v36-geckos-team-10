@@ -24,7 +24,7 @@ function Hero() {
         </button>
       </div>
       <div className="landing-hero-banner">
-          <img src={banner1} alt="" srcset="" />
+          <img src={banner1} alt="" />
 
 
       </div>

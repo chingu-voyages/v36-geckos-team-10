@@ -5,13 +5,13 @@ function PicGridSection() {
   return (
     <div className="landing-pic-grid">
       <div className="pic-grid">
-        <img src={picgridImage} alt="" srcset="" />
+        <img src={picgridImage} alt="" />
       </div>
       <div className="pic-grid">
-        <img src={picgridImage} alt="" srcset="" />
+        <img src={picgridImage} alt="" />
       </div>
       <div className="pic-grid">
-        <img src={picgridImage} alt="" srcset="" />
+        <img src={picgridImage} alt="" />
       </div>
     </div>
   );

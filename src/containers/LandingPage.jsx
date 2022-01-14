@@ -1,5 +1,4 @@
 import React from 'react'
-import Nav from '../components/Nav'
 import Hero from '../components/Hero'
 import FeaturesSection from '../components/FeaturesSection'
 import PicGridSection from '../components/PicGridSection';
@@ -11,9 +10,7 @@ function LandingPage() {
             <Hero/>
             <FeaturesSection/>
             <PicGridSection/>
-            <Footer/>
-
-            
+            <Footer/>            
         </div>
     )
 }

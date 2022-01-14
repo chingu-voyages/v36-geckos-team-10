@@ -5,8 +5,7 @@ function Footer() {
     return (
         <div className='footer'>
             <Link to='/'>Logo</Link>
-            <h2>Footer Section</h2>
-            
+            <h2>Footer Section</h2>           
             
         </div>
     )
