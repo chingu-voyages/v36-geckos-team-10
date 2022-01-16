@@ -1,22 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
-
 html,
 body,
 #root {
     height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    font-size: 18px;
+    color: #333;
 }
-#appTitle {
-  font-family: 'Lobster', cursive;
-  font-size: 2em;
-  text-align: center;
-  color: #006994;
+#logo {
+  height: 80px;
+  width: auto;
 }
 /*** 
 =================
@@ -28,9 +27,9 @@ WORKSPACE STYLING
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background: -webkit-linear-gradient(70deg, #006994, rgba(0,0,0,0) 30%), -webkit-linear-gradient(30deg, #001F94, #009475);
-    background: -moz-linear-gradient(70deg, #006994, rgba(0,0,0,0) 30%), -moz-linear-gradient(30deg, #001F94, #009475);
-    background: linear-gradient(70deg, #006994, rgba(0,0,0,0) 30%), linear-gradient(30deg, #001F94, #009475);
+    background: -webkit-linear-gradient(90deg, #fff, rgba(0,0,0,0) 40%), -webkit-linear-gradient(30deg, #aaa, #fff);
+    background: -moz-linear-gradient(90deg, #fff, rgba(0,0,0,0) 40%), -moz-linear-gradient(30deg, #aaa, #fff);
+    background: linear-gradient(90deg, #fff, rgba(0,0,0,0) 40%), linear-gradient(30deg, #aaa, #fff);
     backdrop-filter: blur(200px);
 }
 
@@ -40,7 +39,7 @@ WORKSPACE STYLING
 
 .ws-container .ws-builder {
     padding: 30px 0;
-    width: 75vw;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -64,23 +63,29 @@ WORKSPACE STYLING
 }
 
 .ws-container .ws-builder .template.dragging .element {
-    background: repeating-linear-gradient( -55deg, #ccc, #ccc 10px, #aaa 10px, #aaa 20px);
-    border: 3px solid #aaa;
+    background: repeating-linear-gradient( -55deg, #ddd, #ddd 10px, #ccc 10px, #ccc 20px);
+    border: 3px solid #ccc;
 }
 
 .ws-container .ws-builder .template:hover>div {
-    background: repeating-linear-gradient( -55deg, #ccc, #ccc 10px, #aaa 10px, #aaa 20px);
-    border: 3px solid #aaa;
+    background: repeating-linear-gradient( -55deg, #ddd, #ddd 10px, #ccc 10px, #ccc 20px);
+    border: 3px solid #ccc;
 }
-
+.ws-container .ws-builder .template:hover .delete-btn {
+  border-left: 2px solid #bbb;
+}
 .ws-container .ws-builder .element {
   border: 3px solid rgba(255,255,255,0.3);
-  background-color: rgba(255,255,255,0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
+              inset 0 2px 2px rgba(0,0,0,.2),
+              inset 0 -2px 2px rgba(0,0,0,.2);
+  background-color: #fff;
   padding: 50px;
   border-radius: 15px;
   flex: 1;
   user-select: none;
   text-align: center;
+  position: relative;
 }
 
 /***
@@ -92,15 +97,17 @@ WORKSPACE STYLING
     flex: 1;
     overflow: hidden;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
 }
 .dropdown-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
   padding: 10px;
-  margin: 30px;
   background-color: rgba(255,255,255,0.8);
   border-radius: 5px;
   border: 2px solid grey;
@@ -161,6 +168,61 @@ WORKSPACE STYLING
   background-color: #ccc;
 }
 /***
+=====
+MODAL
+=====
+***/
+#modal-background {
+  transform: translateY(-20vh);
+  z-index: 1000;
+  position: absolute;
+  min-width: 100vw;
+  min-height: 120vh;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+#export-modal {
+  z-index: 1001;
+  height: 500px;
+  min-width: 1000px;
+  width: fit-content;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 40%;
+  left: 50%;
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#export-modal .modal-closer {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 2em;
+}
+#export-modal .code-field {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+#export-modal .export-code {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;  
+  overflow-y: auto;
+}
+#export-modal .export-code code {
+  background-color: whitesmoke;
+  padding: 20px;
+  width: 90%;
+  flex: 1;
+  color: #333;
+}
+/***
 =========
 UNIVERSAL
 =========
@@ -168,6 +230,7 @@ UNIVERSAL
 .hidden {
   opacity: 0;
   transition: .5s;
+  display: none;
 }
 /* To prevent errors when clicking on the wrong element */
 .clickFix {
@@ -188,26 +251,24 @@ nav .active {
   border-bottom: 1px solid green;
 }
 
-.brand-name, .landing-nav-item, .btn-create {
+.brand-name, .landing-nav-item {
   cursor: pointer;
 }
-.btn-create {
-  padding: .5rem 1rem;
-  font-weight: 800;
-  border-radius: .4rem;
-}
 .landing-nav {
-  padding: 2rem;
+  padding: 1rem;
 }
 .landing-nav nav {
   display: flex;
+  justify-self: center;
   padding: 0 10rem;
-  justify-content: space-between;
   align-items: center;
 }
 
 .landing-nav .landing-ul {
   display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .landing-nav .landing-nav-item {
@@ -279,7 +340,14 @@ nav .active {
   .landing-hero-description, .landing-hero-banner {
     flex-basis: 40%;
   }
-
+  .landing-hero-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .landing-hero-description .btn-create {
+    align-self: flex-end;
+  }
   .features-container {
     display: grid;
     padding: 10rem;
@@ -311,5 +379,98 @@ nav .active {
   
 }
 
-
-
+/*TEST*/
+#theme-toggle {
+  transform: scale(.7);
+  position: relative;
+  width: 160px;
+  height: 80px;
+  border-radius: 80px;
+  background-color: #222;
+  cursor: pointer;
+  box-shadow: inset 0 4px 30px rgba(0, 0, 0, 0.1),
+              inset 0 4px 4px rgba(0, 0, 0, 0.1),
+              inset 0 -2px 2px rgba(0, 0, 0, 0.1);
+}
+#theme-toggle .indicator {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  font-size: 1.5em;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to bottom, #444, #222);
+  border-radius: 50%;
+  transform: scale(0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5),
+              inset 0 2px 2px rgba(255,255,255,0.2),
+              inset 0 -2px 2px rgba(255,255,255,0.2);
+  transition: left 0.5s;
+}
+#theme-toggle.white .indicator {
+  left: 80px;
+  color: black;
+  transition: 0.5s;
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1),
+              inset 0 2px 2px rgba(255,255,255,1),
+              inset 0 -2px 2px rgba(255,255,255,1);
+}
+#theme-toggle.white {
+  background: #fff;
+  box-shadow: inset 0 1px 30px rgba(0, 0, 0, 0.1),
+              inset 0 1px 4px rgba(0, 0, 0, 0.1),
+              inset 0 -1px 4px rgba(0, 0, 0, 0.1);
+}
+.btn {
+  padding: .8em 2em;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  background: #F0F0F3;
+  box-shadow: -10px -10px 30px #FFF,
+              10px 10px 30px #AEAEC040,
+              inset -10px -10px 10px #AEAEC025,
+              inset 10px 10px 10px #FFF;
+  border: none;
+  transition: .3s;
+  font-weight: 600;
+  border: 2px solid #ddd;
+  color: #333;
+}
+.btn.pressed {
+  box-shadow: inset -10px -10px 10px #FFFFFF70,
+              inset 10px 10px 10px #AEAEC020;
+}
+.delete-btn {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  border: none;
+  color: #888;
+  border-left: 2px solid #ddd;
+  background: transparent;
+  border-radius: 0 12px 12px 0;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  color: white;
+  background: repeating-linear-gradient( -55deg, #FF7F7F, #FF7F7F 10px, #FF6666 10px, #FF6666 20px) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
+              inset 0 2px 2px rgba(0,0,0,.2),
+              inset 0 -2px 2px rgba(0,0,0,.2);
+}
+span {
+  pointer-events: none;
+}

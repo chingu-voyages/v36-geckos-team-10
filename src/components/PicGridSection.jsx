@@ -1,5 +1,5 @@
 import React from "react";
-import picgridImage from "../asset/create2.jpg";
+import picgridImage from "../assets/create2.jpg";
 
 function PicGridSection() {
   return (

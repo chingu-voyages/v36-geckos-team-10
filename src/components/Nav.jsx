@@ -1,14 +1,22 @@
-import React from 'react';
+import { useRef, useState } from 'react';
+import { BsFillMoonStarsFill, BsCloudSun } from 'react-icons/bs'
+import logo from '../assets/logo.jpg';
+import logoAlt from '../assets/logoAlt.jpg'
 import { Link, NavLink } from 'react-router-dom';
 
 function Nav() {
-    const activeClassName = {borderBottom: '1px solid green'};
-    
+    const activeClassName = {borderBottom: '1px solid #333'};
+    const [themeIcon, setThemeIcon] = useState(<BsFillMoonStarsFill />);
+    const indicator = useRef(null)
+    const toggleTheme = () => {
+        indicator.current.classList.toggle('white')
+        setThemeIcon(indicator.current.classList.contains('white') ? <BsCloudSun/> : <BsFillMoonStarsFill />)
+    }
     return (
         <div className='landing-nav'>
             <nav>
                 <h1 className='brand-name'>
-                    <Link to='/'> Logo </Link>
+                    <Link to='/'> <img id="logo" src={logoAlt} alt=""/> </Link>
                 </h1>
                 <ul className='landing-ul'>
                     <li className='landing-nav-item'>
@@ -21,9 +29,9 @@ function Nav() {
                         <NavLink to='/showcase' style={({ isActive }) => isActive ? activeClassName : undefined}>Showcase</NavLink>
                     </li>
                 </ul>
-                <button className='btn-create'>
-                    <Link to='/workspace'>CREATE</Link>
-                    </button>
+                <div id='theme-toggle' ref={indicator} onClick={() => toggleTheme()}>
+                    <i className='indicator'>{themeIcon}</i>
+                </div>
             </nav>
 
             

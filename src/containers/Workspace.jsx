@@ -2,11 +2,11 @@ import { useState } from "react";
 import WsBuilder from "./WsBuilder";
 import WsSidebar from "./WsSidebar";
 
-const Workspace = (props) => {
+const Workspace = ({ changeModal }) => {
     const [buildingBlocks, setBuildingBlocks] = useState(['nav', 'div', 'div2', 'div3', 'footer']);
     const addBlocks = (tag, e) => {
         const temp = [tag];
-        setBuildingBlocks(buildingBlocks.concat([temp]));
+        setBuildingBlocks(buildingBlocks.concat(temp));
         // Sidebar message
         e.target.lastChild.classList.remove('hidden');
         setTimeout(() => {
@@ -16,7 +16,7 @@ const Workspace = (props) => {
     return (
         <div className="ws-container">
             <WsBuilder buildingBlocks={buildingBlocks} setBuildingBlocks={setBuildingBlocks}/>
-            <WsSidebar handleAdd={addBlocks} />
+            <WsSidebar handleAdd={addBlocks} changeModal={changeModal} />
         </div>
     );
 }
