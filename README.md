@@ -1,4 +1,4 @@
-# Project name TBD
+# EasyWeb Project
 This is initial version of the project's README file.<br>
 As developers, we know how time consuming setting up a new project can be, the aim of our project is to create a tool that would simplify this process for you.
 
