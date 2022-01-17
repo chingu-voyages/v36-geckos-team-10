@@ -7,12 +7,15 @@ import Features from "./containers/Features";
 import Showcase from "./containers/ShowCase";
 import Nav from "./components/Nav";
 import ExportModal from "./containers/ExportModal";
+import Theme from "./containers/theme"
+import Banner from './components/Banner';
 
 function App() {
   const [modalState, setModalState] = useState(false);
   const [buildingBlocks, setBuildingBlocks] = useState(['nav', 'div', 'div2', 'div3', 'footer']);
   return (
     <BrowserRouter>
+    <Banner/>
       <Nav />
       <ExportModal changeModal={[modalState, setModalState]} buildingBlocks={buildingBlocks} />
       <Routes>
@@ -20,6 +23,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/showcase" element={<Showcase />} />
         <Route path="/features" element={<Features />} />
+        <Route path="/theme" element={<Theme />} />
         <Route path="/workspace" element={<Workspace changeModal={[modalState, setModalState]} buildingBlocks={buildingBlocks} setBuildingBlocks={setBuildingBlocks} />} />
       </Routes>
     </BrowserRouter>

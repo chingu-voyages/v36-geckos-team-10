@@ -8,7 +8,7 @@ export const BtnStyled = ({ innerText, changeModal }) => {
         /export/i.test(innerText) && changeModal[1](!changeModal[0]);
     }
     return (
-        <button className="btn" onMouseDown={(e) => clickAnim(e)}  onClick={() => clickFunc()}>
+        <button className="" onMouseDown={(e) => clickAnim(e)}  onClick={() => clickFunc()}>
             {/create/i.test(innerText) ? innerText.split('').map((char, ind) => <span className={'color' + ind} key={ind}>{char}</span>) : innerText}
         </button>
     );
