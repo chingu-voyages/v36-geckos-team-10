@@ -24,7 +24,7 @@ const WhyUs = () => {
             <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-4">
                     <div
-                            className="text-red-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
+                            className="text-red-600 text-3xl p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
                     >
                         <FaAddressCard/>
                     </div>
@@ -45,7 +45,7 @@ const WhyUs = () => {
             <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-4">
                     <div
-                            className="text-red-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
+                            className="text-red-600 p-3 text-3xl text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
                     >
                         <FaBitcoin/>
                     </div>
@@ -66,7 +66,7 @@ const WhyUs = () => {
             <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-4">
                     <div
-                            className="text-red-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
+                            className="text-red-600 p-3 text-center text-3xl inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
                     >
                         <FaChessKing/>
                     </div>

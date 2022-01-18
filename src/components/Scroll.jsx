@@ -14,7 +14,7 @@ const ScrollToTop = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {handleScroll()});
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", () => {handleScroll()});
     }
   }, []);
 
@@ -32,12 +32,12 @@ const ScrollToTop = () => {
         <button onClick={scrollToTop} className="z-50
         fixed 
         p-3 
-        text-black 
+        text-white 
         transition 
         duration-600 
         ease-in-out 
         bg-indigo-600
-        rounded-sm 
+        rounded-md 
         bottom-4
         right-4
         focus:outline-none">
