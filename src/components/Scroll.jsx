@@ -4,15 +4,18 @@ import { FaAngleUp } from "react-icons/fa";
 const ScrollToTop = () => {
   // The back-to-top button is hidden at the beginning
   const [showButton, setShowButton] = useState(false);
-
+  const handleScroll = () => {
+    if (window.pageYOffset > 300) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  }
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    });
+    window.addEventListener("scroll", () => {handleScroll()});
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   // This function will scroll the window to the top 
