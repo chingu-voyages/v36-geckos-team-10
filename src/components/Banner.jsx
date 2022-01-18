@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegLaughSquint, FaTimes} from 'react-icons/fa';
 
-export default function Example() {
+export default function Banner() {
   return (
     <div className="bg-indigo-600">
       <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">

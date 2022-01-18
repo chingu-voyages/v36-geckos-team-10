@@ -1,17 +1,17 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import FeaturesSection from '../components/FeaturesSection'
-import PicGridSection from '../components/PicGridSection';
+import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
-import Transistion from '../components/Transistion';
+import WhyUs from '../components/WhyUs';
 
 function LandingPage() {
     return (
         <div className=''>
             <Hero/>
             <FeaturesSection/>
-            <PicGridSection/>
-            <Transistion/>
+            <WhyUs/>
+            <Newsletter/>
             <Footer/>            
         </div>
     )

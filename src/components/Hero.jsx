@@ -7,7 +7,7 @@ export default function Hero() {
 
   
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden z-0">
       <div className="max-w-7xl mx-auto ">
         <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
     
@@ -25,8 +25,7 @@ export default function Hero() {
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
                 
-                <SignUp/>
-                {/* <BtnStyled innerText={'Get started'} /> */}
+                <SignUp className=""/>
                 </div>
               </div>
             </div>
