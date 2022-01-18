@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { FaTimes, FaLock} from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import logo from '../assets/logo.jpg';
 
 export default function SignUp() {
   const [open, setOpen] = useState(false)
@@ -68,8 +69,9 @@ export default function SignUp() {
                             <div>
                                 <img
                                 className="mx-auto h-12 w-auto"
-                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                                alt="Workflow"
+                                src=
+                                {logo}
+                                alt="Easy Web"
                                 />
                                 <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
                                 <p className="mt-2 text-center text-sm text-gray-600">
@@ -137,13 +139,13 @@ export default function SignUp() {
                                 <button
                                     type="submit"
                                     className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                    
                                 >
                                     <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                                     <FaLock className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
                                     </span>
                                     Sign in
                                 </button>
-                               
                         </Link>
                                 </div>
                             </form>
