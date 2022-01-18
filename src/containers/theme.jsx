@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Footer from '../components/Footer';
 import Saly from '../assets/Other 12.svg'
 
@@ -14,25 +14,16 @@ export default function Theme() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa magnam error neque iste reprehenderit, eius fuga porro voluptas incidunt quia sit magni dicta nemo autem nam cum ratione deserunt at?
               </p>
             <div className="inline-flex rounded-md shadow">
-            <Link to="/Workspace">
-              <a
-                href="/"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-              >
-                Launch
-              </a>
-              </Link>
-            </div>
-           
-          </h2>
-       
+            <NavLink to="/Workspace" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+              Launch
+            </NavLink>
+            </div>           
+          </h2>       
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <img src={Saly} alt="" className="h-96 w-auto"/>
-          </div>
-          
+          </div>          
         </div>
       </div>
-
       <Footer/>
 </>
     )
