@@ -4,6 +4,7 @@ import FeaturesSection from '../components/FeaturesSection'
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 import WhyUs from '../components/WhyUs';
+import ScrollToTop from '../components/Scroll';
 
 function LandingPage() {
     return (
@@ -12,7 +13,8 @@ function LandingPage() {
             <FeaturesSection/>
             <WhyUs/>
             <Newsletter/>
-            <Footer/>            
+            <Footer/>   
+            <ScrollToTop/>         
         </div>
     )
 }
