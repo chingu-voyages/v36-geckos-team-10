@@ -10,12 +10,13 @@ Web developers
 ### Use Cases:
   - Template layout custumization with draggable components.
   - Option to add, remove, duplicate or customise specific components.
+  - Option to choose a color theme.
   - Option to export html/css of a finished template.
 
 ## - FILE STRUCTURE - 
 For now we should only concerne ourselves with the contents of the 'src' folder. I've took the liberty to create couple of subfolders.<br>
- - containers (All statefull components)
+ - Pages (All react-router endpoints)
+ - PageElements (Sections of the main pages)
  - components (Stateless components)
  - assets (Media)
- - store (Redux)
  - features (Additional JS logic)

@@ -1,5 +1,5 @@
-import WsBuilder from "./WsBuilder";
-import WsSidebar from "./WsSidebar";
+import WsBuilder from "../PageElements/WsBuilder";
+import WsSidebar from "../PageElements/WsSidebar";
 
 const Workspace = ({ changeModal, buildingBlocks, setBuildingBlocks }) => {
         const addBlocks = (tag, e) => {

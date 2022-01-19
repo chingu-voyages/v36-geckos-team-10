@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.jpg';
-import{FaInstagram, FaTwitter, FaLinkedin} from 'react-icons/fa'
+import logo from '../assets/round-logo.jpg';
+import chinguLogo from '../assets/chingu-logo.jpg';
+import{FaGithub, FaTwitter, FaLinkedin} from 'react-icons/fa'
 
 function Footer() {
     return (
@@ -14,12 +15,13 @@ function Footer() {
 
           {/* 1st block */}
           <div className="sm:col-span-12 lg:col-span-3">
-            <div className="mb-2">
+            <div className="mb-2 flex">
               {/* Logo */}
               {/* <Link to='/'>Logo</Link> */}
-              <Link to="/" className="inline-block" aria-label="Cruip">
-                  <img className='w-12 h-8' src={logo} alt="" />
+              <Link to="/" aria-label="Cruip">
+                  <img className='w-12 h-12' src={logo} alt="" />
               </Link>
+              <img className='w-12 h-12' src={chinguLogo} alt="" />
             </div>
             <div className="text-sm text-gray-600">
               <Link to="#" className="text-gray-600 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Terms</Link> · <Link to="#" className="text-gray-600 hover:text-gray-900 hover:underline transition duration-150 ease-in-out">Privacy Policy</Link>
@@ -101,19 +103,19 @@ function Footer() {
         <div className="md:flex md:items-center md:justify-between py-4 md:py-8 border-t border-gray-200">
 
           {/* Social links */}
-          <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0">
+          <ul className="text-2xl flex justify-center items-center ga-4 mb-4 md:order-1 md:ml-4 md:mb-0">
             <li>
-              <Link to="/" className="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" aria-label="Twitter">
-             <FaInstagram/>
-              </Link>
+              <a href='https://github.com/chingu-voyages/v36-geckos-team-10' target='_blank' className="text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" aria-label="Twitter">
+             <FaGithub/>
+              </a>
             </li>
             <li className="ml-4">
-              <Link to="#" className="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" aria-label="Github">
+              <Link to="#" className="text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" aria-label="Github">
                <FaTwitter/>
               </Link>
             </li>
             <li className="ml-4">
-              <Link to="#" className="flex justify-center items-center text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" aria-label="Facebook">
+              <Link to="#" className="text-gray-600 hover:text-gray-900 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" aria-label="Facebook">
               <FaLinkedin/>
               </Link>
             </li>
@@ -129,4 +131,4 @@ function Footer() {
     )
 }
 
-export default Footer
+export default Footer;

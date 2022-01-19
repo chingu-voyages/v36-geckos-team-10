@@ -1,6 +1,5 @@
 import React from 'react';
 import banner1 from '../assets/Other 12.svg';
-
 function Newsletter() {
   return (
     <section>
@@ -18,17 +17,17 @@ function Newsletter() {
             <div className="relative flex flex-col lg:flex-row justify-between items-center">
 
               {/* CTA content */}
-              <div className="text-center lg:text-left lg:max-w-xl">
+              <div className="text-center w-full lg:text-left">
                 <h3 className="h2 text-white mb-2 text-xl text-indigo-200">Powering your business</h3>
                 <p className="text-gray-300 text-lg mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit nemo expedita voluptas culpa sapiente.</p>
 
                 {/* CTA form */}
                 <form className="w-full lg:w-auto">
-                  <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:mx-0">
+                  <div className="flex flex-col sm:flex-row justify-center w-full mx-auto lg:mx-0">
                     <input type="email" className="w-full appearance-none bg-gray-800 border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-gray-500" placeholder="Your email…" />
                     <button
                       type="button"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                      className="max-w-lg flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                     >
                       Subscribe
                     </button>

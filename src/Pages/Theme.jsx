@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Footer from '../components/Footer';
+import Footer from '../PageElements/Footer';
 import Saly from '../assets/Other 12.svg'
 
 export default function Theme() {

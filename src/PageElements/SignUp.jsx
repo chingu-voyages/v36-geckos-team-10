@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { FaTimes, FaLock} from 'react-icons/fa';
 import { Link } from "react-router-dom";
-import logo from '../assets/logo.jpg';
+import logo from '../assets/round-logo.jpg';
 
 export default function SignUp() {
   const [open, setOpen] = useState(false)
