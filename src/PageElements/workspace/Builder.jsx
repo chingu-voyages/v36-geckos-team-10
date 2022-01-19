@@ -1,10 +1,10 @@
-import dragAndDrop from "../features/dragDrop";
+import dragAndDrop from "../../features/dragDrop";
 import { useEffect, useRef } from "react";
-import BuilderComponent from "../components/BuilderComponent";
+import BuilderComponent from "../../components/BuilderComponent";
 
 // component that contains workspace builder area
 // builder components are added automatically by clicking the sidebar menu
-const WsBuilder = ({ buildingBlocks, setBuildingBlocks }) => {
+const Builder = ({ buildingBlocks, setBuildingBlocks }) => {
     let dragParent = useRef(null);
     useEffect(() => {
         //sends DOM element to the function
@@ -23,4 +23,4 @@ const WsBuilder = ({ buildingBlocks, setBuildingBlocks }) => {
     );
 }
 
-export default WsBuilder;
+export default Builder;

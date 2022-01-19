@@ -1,16 +1,16 @@
 import React from 'react'
-import Hero from '../PageElements/Hero'
-import FeaturesSection from '../PageElements/FeaturesSection'
-import Newsletter from '../PageElements/Newsletter';
+import Hero from '../PageElements/landingPage/Hero'
+import Features from '../PageElements/landingPage/Features'
+import Newsletter from '../PageElements/landingPage/Newsletter';
 import Footer from '../PageElements/Footer';
-import Showcase from '../PageElements/Showcase';
-import ScrollToTop from '../PageElements/Scroll';
+import Showcase from '../PageElements/landingPage/Showcase';
+import ScrollToTop from '../PageElements/landingPage/ScrollToTop';
 
 function LandingPage() {
     return (
         <div className=''>
             <Hero/>
-            <FeaturesSection/>
+            <Features/>
             <Showcase/>
             <Newsletter/>
             <Footer/>   

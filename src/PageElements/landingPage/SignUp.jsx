@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { FaTimes, FaLock} from 'react-icons/fa';
 import { Link } from "react-router-dom";
-import logo from '../assets/round-logo.jpg';
+import logo from '../../assets/round-logo.jpg';
 
 export default function SignUp() {
   const [open, setOpen] = useState(false)
@@ -67,11 +67,7 @@ export default function SignUp() {
                     {/* Replace with your content */}
                     <div className="max-w-md w-full space-y-8">
                             <div>
-                                <img
-                                className="mx-auto h-12 w-auto"
-                                src=
-                                {logo}
-                                alt="Easy Web"
+                                <img className="mx-auto h-28 w-auto" src={logo}alt="Easy Web"
                                 />
                                 <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
                                 <p className="mt-2 text-center text-sm text-gray-600">

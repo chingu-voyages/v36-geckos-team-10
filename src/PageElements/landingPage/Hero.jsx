@@ -1,6 +1,6 @@
-import banner1 from '../assets/Other 03.svg';
+import banner1 from '../../assets/Other 03.svg';
 // import BtnStyled from "./BtnStyled";
-import SignUp from '../PageElements/SignUp';
+import SignUp from './SignUp';
 
 
 export default function Hero() {

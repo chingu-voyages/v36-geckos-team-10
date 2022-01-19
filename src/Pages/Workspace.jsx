@@ -1,5 +1,5 @@
-import WsBuilder from "../PageElements/WsBuilder";
-import WsSidebar from "../PageElements/WsSidebar";
+import Builder from "../PageElements/workspace/Builder";
+import Sidebar from "../PageElements/workspace/Sidebar";
 
 const Workspace = ({ changeModal, buildingBlocks, setBuildingBlocks }) => {
         const addBlocks = (tag, e) => {
@@ -13,8 +13,8 @@ const Workspace = ({ changeModal, buildingBlocks, setBuildingBlocks }) => {
     }
     return (
         <div className="ws-container">
-            <WsBuilder buildingBlocks={buildingBlocks} setBuildingBlocks={setBuildingBlocks}/>
-            <WsSidebar handleAdd={addBlocks} changeModal={changeModal} />
+            <Builder buildingBlocks={buildingBlocks} setBuildingBlocks={setBuildingBlocks}/>
+            <Sidebar handleAdd={addBlocks} changeModal={changeModal} />
         </div>
     );
 }

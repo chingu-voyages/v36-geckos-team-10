@@ -1,5 +1,5 @@
 import React from 'react';
-import banner1 from '../assets/Other 12.svg';
+import banner1 from '../../assets/Other 12.svg';
 function Newsletter() {
   return (
     <section>

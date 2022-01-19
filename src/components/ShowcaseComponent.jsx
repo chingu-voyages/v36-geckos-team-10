@@ -1,7 +1,7 @@
-export const ShowcaseEl = ({ heading, icon, content, image, num }) => {
+export const ShowcaseComponent = ({ heading, icon, content, image, num }) => {
     const changeClass = `items-center flex flex-col ${num === 1 ? "md:flex-row-reverse" : "md:flex-row"}`;
     return (
-    <div className="container mx-auto px-4 py-8">
+    <article className="container mx-auto px-4 py-8">
         <div className={changeClass}>
             <div className="w-full md:w-4/12 mr-auto px-4 md:pt-0 my-0">
               <img src={image} alt="showcaseImg" />
@@ -18,6 +18,8 @@ export const ShowcaseEl = ({ heading, icon, content, image, num }) => {
                 </div>        
             </div>
         </div>
-    </div>
+    </article>
     );
 }
+
+export default ShowcaseComponent
