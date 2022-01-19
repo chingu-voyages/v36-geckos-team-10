@@ -12,9 +12,9 @@ const ScrollToTop = () => {
     }
   }
   useEffect(() => {
-    window.addEventListener("scroll", () => {handleScroll()});
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", () => {handleScroll()});
+      window.removeEventListener("scroll", handleScroll);
     }
   }, []);
 
@@ -29,7 +29,7 @@ const ScrollToTop = () => {
   return (
     <Fragment>
       {showButton && (
-        <button onClick={scrollToTop} className="z-50
+        <button onClick={() => scrollToTop()} className="z-50
         fixed 
         p-3 
         text-white 
