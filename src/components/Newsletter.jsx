@@ -1,52 +1,22 @@
-import React from 'react';
-import banner1 from '../assets/Other 12.svg';
+import React from "react";
+import newsletter from '../assets/newsletter-1.png'
 
-function Newsletter() {
-  return (
-    <section>
-      <div className="max-w-6xl mx-auto px-4 mt-20 sm:px-6">
-        <div className="pb-12 md:pb-20">
-
-          {/* CTA box */}
-          <div className="relative bg-gray-900 rounded py-10 px-8 md:py-16 md:px-12 shadow-2xl overflow-hidden">
-              
-            {/* Background illustration */}
-            <div className="absolute right-12 bottom-12 pointer-events-none hidden lg:block" >
-             <img src={banner1} alt="" className='w-72 h-auto' />
+export default function Home() {
+    return (
+        <>
+            <div className="p-6 max-w-7xl mb-24 container md:w-2/3 xl:w-auto mx-auto  flex flex-col xl:items-stretch justify-between xl:flex-row">
+                <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative h-auto flex items-center justify-center">
+                    <img src={newsletter} alt="" className="h-full xl:w-full lg:w-1/2 w-full " />
+                </div>
+                <div className="w-full xl:w-1/2 xl:pl-40 xl:py-28 ">
+                    <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold leading-10 text-gray-800 mb-4 text-center xl:text-left md:mt-0 mt-4">Subscribe</h1>
+                    <p className="text-base leading-normal text-gray-600 text-center xl:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo doloribus, suscipit quod similique dicta magni id, iusto quibusdam.</p>
+                    <div className="flex items-stretch mt-12">
+                        <input className="bg-gray-100 rounded-lg rounded-r-none text-base leading-none text-gray-800 p-5 w-4/5 border border-transparent focus:outline-none focus:border-gray-500" type="email" placeholder="Your Email" />
+                        <button className="w-32 rounded-l-none hover:bg-indigo-600 bg-indigo-700 rounded text-base font-medium leading-none text-white p-5 uppercase focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700">subscribe</button>
+                    </div>
+                </div>
             </div>
-
-            <div className="relative flex flex-col lg:flex-row justify-between items-center">
-
-              {/* CTA content */}
-              <div className="text-center lg:text-left lg:max-w-xl">
-                <h3 className="h2 text-white mb-2 text-xl text-indigo-200">Powering your business</h3>
-                <p className="text-gray-300 text-lg mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit nemo expedita voluptas culpa sapiente.</p>
-
-                {/* CTA form */}
-                <form className="w-full lg:w-auto">
-                  <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:mx-0">
-                    <input type="email" className="w-full appearance-none bg-gray-800 border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-gray-500" placeholder="Your email…" />
-                    <button
-                      type="button"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-                    >
-                      Subscribe
-                    </button>
-                  </div>
-                  {/* Success message */}
-                  {/* <p className="text-sm text-gray-400 mt-3">Thanks for subscribing!</p> */}
-                  <p className="text-sm text-gray-400 mt-3">7 days free trial. No credit card required.</p>
-                </form>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-  );
+        </>
+    );
 }
-
-export default Newsletter;

@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-function ShowCase() {
-    return (
-        <div className='showcase-wrapper'>
-            <h1>Showcase</h1>
-        </div>
-    )
-}
+const ShowCase = () => {
+  return <div>
+      SHOWCASE
+  </div>;
+};
 
-export default ShowCase
+export default ShowCase;

@@ -18,7 +18,7 @@ const WsSidebar = ({ handleAdd, changeModal }) => {
                 <Dropdown items={ semanticTags } handleAdd={ handleAdd } />
             </div>
             <div>
-                <BtnStyled innerText='export' changeModal={changeModal} />
+                <BtnStyled innerText='Export' changeModal={changeModal} />
             </div>
         </aside>
     );

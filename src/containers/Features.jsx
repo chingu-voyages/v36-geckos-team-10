@@ -1,12 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-function Features() {
-    return (
-        <div className='features-wrapper'>
-            <h1>Features Page</h1>
-            
-        </div>
-    )
-}
+const Features = () => {
+  return <div></div>;
+};
 
-export default Features
+export default Features;
