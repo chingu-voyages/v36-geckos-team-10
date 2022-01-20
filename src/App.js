@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import LandingPage from "./Pages/LandingPage";
-import Workspace from "./Pages/Workspace";
+import LandingPage from "./pages/LandingPage";
+import Workspace from "./pages/Workspace";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./PageElements/Navbar";
-import ExportModal from "./PageElements/ExportModal";
-import Theme from "./Pages/Theme"
-import Banner from './PageElements/Banner';
+import Navbar from "./pageElements/Navbar";
+import ExportModal from "./pageElements/ExportModal";
+import Theme from "./pages/Theme"
+import Banner from './pageElements/Banner';
 
 function App() {
   const [modalState, setModalState] = useState(false);

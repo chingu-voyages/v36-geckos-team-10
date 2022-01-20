@@ -1,15 +1,17 @@
-//Drag&Drop logic for WsBuilder.jsx
+//Drag&Drop logic for Builder.jsx
 
 //Exported function that adds event listeners and changes the arrangement of the divs
-const dragAndDrop = (r) => {
-    const container = r.current; 
-    const draggables = [].slice.call(r.current.children);
+const dragAndDrop = (el, changeState) => {
+    const container = el.current;
+    const draggables = [].slice.call(el.current.children);
     draggables.forEach(draggable => {
         draggable.addEventListener('dragstart', () => {
             draggable.classList.add('dragging')
         })
         draggable.addEventListener('dragend', () => {
             draggable.classList.remove('dragging');
+            //updates export files after every drop
+            changeState([].slice.call(container.children).map(child => child.dataset.tag))
         })
     })
     container.addEventListener('dragover', e =>  {

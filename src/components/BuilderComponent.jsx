@@ -14,7 +14,7 @@ const click = (el) => {setBuildingBlocks(buildingBlocks.filter((block, index) =>
     }
 
     return (
-        <div className="template" draggable='true'>
+        <div className="template" data-tag={tags} draggable='true'>
           {innerDivs()}
         </div>
     );

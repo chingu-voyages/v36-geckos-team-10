@@ -8,7 +8,7 @@ const Builder = ({ buildingBlocks, setBuildingBlocks }) => {
     let dragParent = useRef(null);
     useEffect(() => {
         //sends DOM element to the function
-        dragAndDrop(dragParent);
+        dragAndDrop(dragParent, setBuildingBlocks);
     }, [buildingBlocks]);
     return (
         <main className="ws-builder" ref={dragParent}>
