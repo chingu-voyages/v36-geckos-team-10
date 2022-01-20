@@ -3,7 +3,7 @@ import Footer from '../pageElements/Footer';
 import Saly from '../assets/Other 12.svg'
 import React from "react";
 
-export default function Theme() {
+export function TemplatePicker() {
     return (
       <React.Fragment>
       <div className="bg-gray-50 h-screen">
@@ -29,4 +29,6 @@ export default function Theme() {
       </React.Fragment>
     )
   }
+
+  export default TemplatePicker;
   

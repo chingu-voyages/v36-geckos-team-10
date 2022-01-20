@@ -17,6 +17,6 @@ Web developers
 For now we should only concerne ourselves with the contents of the 'src' folder. I've took the liberty to create couple of subfolders.<br>
  - Pages (All react-router endpoints)
  - PageElements (Sections of the main pages)
- - components (Stateless components)
+ - components (Reusable components)
  - assets (Media)
  - features (Additional JS logic)

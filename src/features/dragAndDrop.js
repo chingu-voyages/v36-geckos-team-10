@@ -11,7 +11,7 @@ const dragAndDrop = (el, changeState) => {
         draggable.addEventListener('dragend', () => {
             draggable.classList.remove('dragging');
             //updates export files after every drop
-            changeState([].slice.call(container.children).map(child => child.dataset.tag))
+            changeState([].slice.call(el.current.children).map(child => child.dataset.tag))
         })
     })
     container.addEventListener('dragover', e =>  {

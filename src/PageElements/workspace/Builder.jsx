@@ -1,4 +1,4 @@
-import dragAndDrop from "../../features/dragDrop";
+import dragAndDrop from "../../features/dragAndDrop";
 import { useEffect, useRef } from "react";
 import BuilderComponent from "../../components/BuilderComponent";
 
@@ -9,10 +9,10 @@ const Builder = ({ buildingBlocks, setBuildingBlocks }) => {
     useEffect(() => {
         //sends DOM element to the function
         dragAndDrop(dragParent, setBuildingBlocks);
-    }, [buildingBlocks]);
+    }, []);
     return (
         <main className="ws-builder" ref={dragParent}>
-            {buildingBlocks.map((block, ind) => <BuilderComponent className="element" 
+            {buildingBlocks.map((block, ind) => <BuilderComponent 
                                                 key={ind} 
                                                 tags={block}
                                                 id={ind}
