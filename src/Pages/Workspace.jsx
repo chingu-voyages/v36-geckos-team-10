@@ -1,5 +1,5 @@
-import Builder from "../pageElements/workspace/Builder";
-import Sidebar from "../pageElements/workspace/Sidebar";
+import Builder from "../PageElements/workspace/Builder";
+import Sidebar from "../PageElements/workspace/Sidebar";
 
 const Workspace = ({ changeModal, buildingBlocks, setBuildingBlocks }) => {
         const addBlocks = (tag, e) => {
