@@ -1,13 +1,13 @@
 import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { FaTimes, FaLock, FaGoogle, FaTwitter, FaGithub, FaEye} from 'react-icons/fa';
+import { FaTimes, FaGoogle, FaTwitter, FaGithub, FaEye} from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import Form from './form'
 // import logo from '../../assets/round-logo.jpg';
 
 export default function SignUp() {
   const [open, setOpen] = useState(false)
-  const [showpass, setShowPass] = useState(false)
+
 
   
   return (
@@ -103,29 +103,11 @@ export default function SignUp() {
                                     <hr className="w-full bg-gray-400" />
                                 </div>
                               <Form/>
-                                {/* <div className="mt-6 w-full">
-                                    <label htmlFor="myInput" className="text-sm font-medium leading-none text-gray-800">
-                                        {" "}
-                                        Password{" "}
-                                    </label>
-                                    <div className="relative flex items-center justify-center">
-                                        <input id="myInput" type={showpass ? "text" : "password"} className="bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" />
-                                        <div onClick={()=>setShowPass(!showpass)} className="absolute right-0 mt-2 mr-3 cursor-pointer">
-                                            <div id="show">
-                                            <FaEye className="icon icon-tabler " />
-                                            </div>
-                                            <div id="hide" className="hidden">
-                                                <FaEye className="icon icon-tabler " />
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    </div> */}
                                 </div>
                             </div>
                           </div>
-
                       </div>
-                  </div>
+                    </div>
                 </div>
               </Transition.Child>
             </div>

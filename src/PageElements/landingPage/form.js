@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaLock, FaEye } from 'react-icons/fa';
 
 class Project extends Component {
+
   constructor (props) {
     super(props);
     this.state = {
@@ -12,9 +13,25 @@ class Project extends Component {
       formErrors: {email: '', password: ''},
       emailValid: false,
       passwordValid: false,
-      formValid: false
+      formValid: false,
+      // type: 'input',
+      // showPassword: null
     }
+    // this.showPassword = this.showPassword.bind(this);
   }
+
+  // handleClickShowPassword = (e) =>{
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  //   this.setState({
+  //     type: this.state.type === 'input' ?'password' : 'input'
+  //   })
+  // }
+
+
+
+
+
 
   handleUserInput = (e) => {
     const name = e.target.name;
@@ -34,7 +51,7 @@ class Project extends Component {
         fieldValidationErrors.email = emailValid ? '' : ' is invalid';
         break;
       case 'password':
-        passwordValid = value.length >= 6;
+        passwordValid = value.length >= 8;
         fieldValidationErrors.password = passwordValid ? '': ' is too short';
         break;
       default:
@@ -70,11 +87,16 @@ class Project extends Component {
         </div>
         <div className={`mt-6 w-full ${this.errorClass(this.state.formErrors.password)}`}>
           <label htmlFor="password" className='text-sm font-medium leading-none text-gray-800'>Password</label>
-          <input type="password" className="bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" 
+          <input className="bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" 
           name="password"
+          // type={this.state.type}
+          type="password"
             placeholder="Password"
             value={this.state.password}
             onChange={this.handleUserInput}  />
+            {/* <span className='password-show'
+            onClick={this.handleClickShowPassword}
+            >{this.state.type === 'input' ? 'Hide' :'Show'}</span> */}
         </div>
             <div className='mt-8'>
                 <Link className="" to='/Theme'>
