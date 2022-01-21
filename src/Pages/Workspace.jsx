@@ -1,7 +1,7 @@
-import Builder from "../PageElements/workspace/Builder";
-import Sidebar from "../PageElements/workspace/Sidebar";
+import Builder from "../pageElements/workspace/Builder";
+import Sidebar from "../pageElements/workspace/Sidebar";
 
-const Workspace = ({ changeModal, buildingBlocks, setBuildingBlocks }) => {
+const Workspace = ({ toggleModal, buildingBlocks, setBuildingBlocks, changeModal }) => {
         const addBlocks = (tag, e) => {
             const temp = [tag];
             setBuildingBlocks(buildingBlocks.concat(temp));
@@ -13,8 +13,8 @@ const Workspace = ({ changeModal, buildingBlocks, setBuildingBlocks }) => {
     }
     return (
         <div className="ws-container">
-            <Builder buildingBlocks={buildingBlocks} setBuildingBlocks={setBuildingBlocks}/>
-            <Sidebar handleAdd={addBlocks} changeModal={changeModal} />
+            <Builder buildingBlocks={buildingBlocks} setBuildingBlocks={setBuildingBlocks} toggleModal={toggleModal} changeModal={changeModal}  />
+            <Sidebar handleAdd={addBlocks} toggleModal={toggleModal} />
         </div>
     );
 }

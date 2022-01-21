@@ -11,17 +11,18 @@ const dragAndDrop = (el, changeState) => {
         draggable.addEventListener('dragend', () => {
             draggable.classList.remove('dragging');
             //updates export files after every drop
+            console.log([].slice.call(el.current.children).map(child => child.dataset.tag))
             changeState([].slice.call(el.current.children).map(child => child.dataset.tag))
         })
     })
-    container.addEventListener('dragover', e =>  {
+    container.addEventListener('dragover', e => {
         e.preventDefault();
         const nextEl = afterEl(container, e.clientY);
-        const temp = document.querySelector('.dragging');
+        const currentEl = document.querySelector('.dragging');
         if (nextEl == null) {
-            container.appendChild(temp);
+            container.appendChild(currentEl);
         } else {
-            container.insertBefore(temp, nextEl);
+            container.insertBefore(currentEl, nextEl);
         }      
     });
 };
