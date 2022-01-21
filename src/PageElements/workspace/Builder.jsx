@@ -4,18 +4,18 @@ import BuilderComponent from "../../components/BuilderComponent";
 
 // component that contains workspace builder area
 // builder components are added automatically by clicking the sidebar menu
-const Builder = ({ buildingBlocks, setBuildingBlocks }) => {
+const Builder = ({ buildingBlocks, setBuildingBlocks, changeModal }) => {
     let dragParent = useRef(null);
     useEffect(() => {
         //sends DOM element to the function
-        dragAndDrop(dragParent, setBuildingBlocks);
-    }, []);
+        dragAndDrop(dragParent, changeModal);
+    }, [changeModal]);
     return (
         <main className="ws-builder" ref={dragParent}>
-            {buildingBlocks.map((block, ind) => <BuilderComponent 
-                                                key={ind} 
+            {buildingBlocks.map((block, index) => <BuilderComponent 
+                                                key={index} 
                                                 tags={block}
-                                                id={ind}
+                                                id={index}
                                                 buildingBlocks={buildingBlocks}
                                                 setBuildingBlocks={setBuildingBlocks}
                                                 />)}

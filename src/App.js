@@ -8,17 +8,18 @@ import TemplatePicker from "./pages/TemplatePicker"
 import Banner from './pageElements/Banner';
 
 function App() {
-  const [modalState, setModalState] = useState(false);
   const [buildingBlocks, setBuildingBlocks] = useState(['nav', 'div', 'div2', 'div3', 'footer']);
+  const [modalState, setModalState] = useState(false);
+  const [modalContent, setModalContent] = useState([...buildingBlocks]);
   return (
     <BrowserRouter>
     <Banner/>
       <Navbar />
-      <ExportModal changeModal={[modalState, setModalState]} buildingBlocks={buildingBlocks} />
+      <ExportModal changeModal={[modalState, setModalState]} modalContent={modalContent} />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/theme" element={<TemplatePicker />} />
-        <Route path="/workspace" element={<Workspace changeModal={[modalState, setModalState]} buildingBlocks={buildingBlocks} setBuildingBlocks={setBuildingBlocks} />} />
+        <Route path="/template" element={<TemplatePicker />} />
+        <Route path="/workspace" element={<Workspace toggleModal={[modalState, setModalState]} changeModal={setModalContent} buildingBlocks={buildingBlocks} setBuildingBlocks={setBuildingBlocks} />} />
       </Routes>
     </BrowserRouter>
   );
