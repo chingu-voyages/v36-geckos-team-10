@@ -9,9 +9,9 @@ function Dropdown({items = [], handleAdd, title }) {
             <h3 className="pointer-events-none">{ title }</h3>
             <span className="pointer-events-none"><FaAngleDown /></span>
             </div>
-            <ul className="mt-4 bg-white rounded-md shadow-lg z-30 dropdown-list">
+            <ul className="mt-4 bg-white rounded-md shadow-lg z-30 dropdown-list transition duration-900 ease-in-out">
                 {items.map((item, index) => (
-                    <li className="flex justify-between rounded px-3 py-3 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white" key={index} onClick={(e) => handleAdd(item, e)}>{item}<span className="pointer-events-none hidden">component added</span></li>
+                    <li className="flex justify-between rounded px-3 py-3 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white " key={index} onClick={(e) => handleAdd(item, e)}>{item}<span className="pointer-events-none hidden">component added</span></li>
                 ))}
             </ul>
         </div>

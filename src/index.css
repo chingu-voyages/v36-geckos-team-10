@@ -100,6 +100,8 @@ WORKSPACE STYLING
 
 
 .dropdown-wrapper .dropdown-list {
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.21) 0px 4px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 0;
     height: 0;
     opacity: 0;
