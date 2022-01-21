@@ -1,7 +1,7 @@
 import { AiFillCloseCircle } from "react-icons/ai";
 import { transformCss, transformHtml } from "../features/exportFunctionality";
 
-export const ExportModal= ({ changeModal, buildingBlocks }) => {
+export const ExportModal= ({ changeModal, modalContent }) => {
     const handleClose = () => changeModal[1](!changeModal[0]);
     let htmlCode = `
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ export const ExportModal= ({ changeModal, buildingBlocks }) => {
 <title>Lorem ipsum</title>
 </head>
 <body>
-${transformHtml(buildingBlocks).join("\n")}
+${transformHtml(modalContent).join("\n")}
 </body>`;
 let cssCode = `
 * {
@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     font-size: 18px;
 }
-${transformCss(buildingBlocks).join('\n')}
+${transformCss(modalContent).join('\n')}
 `;
     return (
         <div id="modal-background" className={changeModal[0] === false ? 'hidden' : ''}>            
@@ -38,19 +38,15 @@ ${transformCss(buildingBlocks).join('\n')}
             <div className="code-field">
             <div className="export-code">
                 <h3>HTML</h3>
-                <code>
-                <pre>                
+                <code><pre>                
                 {htmlCode}                
-                </pre>
-                </code>
+                </pre></code>
             </div>
             <div className="export-code">
                 <h3>CSS</h3>
-                <code>
-                <pre>                
+                <code><pre>                
                 {cssCode}                
-                </pre>
-                </code>
+                </pre></code>
             </div>
             </div>
             </section>
