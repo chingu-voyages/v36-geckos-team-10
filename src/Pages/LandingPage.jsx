@@ -1,10 +1,10 @@
 import React from 'react'
-import Hero from '../pageElements/landingPage/Hero'
-import Features from '../pageElements/landingPage/Features'
-import Newsletter from '../pageElements/landingPage/Newsletter';
-import Footer from '../pageElements/Footer';
-import Showcase from '../pageElements/landingPage/Showcase';
-import ScrollToTop from '../pageElements/landingPage/ScrollToTop';
+import Hero from '../PageElements/landingPage/Hero'
+import Features from '../PageElements/landingPage/Features'
+import Newsletter from '../PageElements/landingPage/Newsletter';
+import Footer from '../PageElements/Footer';
+import Showcase from '../PageElements/landingPage/Showcase';
+import ScrollToTop from '../PageElements/landingPage/ScrollToTop';
 
 function LandingPage() {
     return (
