@@ -11,7 +11,7 @@ const Sidebar = ({ handleAdd, toggleModal }) => {
         <aside className="ws-sidebar">
                 <Dropdown className={dropDownStyle} items={commonTags} handleAdd={ handleAdd } title='Common Tags' />
                 <Dropdown className={dropDownStyle} items={ semanticTags } handleAdd={ handleAdd } title='Semantic Elements' />
-                <BtnStyled clickFunc={() => {toggleModal[1](!toggleModal[0])}} innerText='export' />
+                <BtnStyled clickFunc={() => {toggleModal[1](!toggleModal[0])}} innerText='Export' />
         </aside>
     );
 }
