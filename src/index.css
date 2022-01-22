@@ -11,8 +11,14 @@
 html,
 body,
 #root {
+    height: 100%;
     font-family: 'Open Sans', sans-serif;
     color: #333;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
 }
 
 /*** 
@@ -22,17 +28,11 @@ WORKSPACE STYLING
 ***/
 
 .ws-container {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     position: relative;
     background-color:#F5F5F5;
-    overflow: hidden;
-}
-
-.ws-container>* {
-    height: 100vh;
 }
 
 .ws-container .ws-builder {
@@ -43,8 +43,6 @@ WORKSPACE STYLING
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
-    overflow-y: auto;
-    overflow-x: hidden;
 }
 
 .ws-container .ws-builder .template {
@@ -65,8 +63,6 @@ WORKSPACE STYLING
 ***/
 
 .ws-container .ws-sidebar {
-    flex: 1;
-    overflow: hidden;
     background-color: #fff;
     display: flex;
     flex-direction: column;

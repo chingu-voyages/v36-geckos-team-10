@@ -51,5 +51,3 @@ import banner1 from '../assets/Other 03.svg';
     ],
     about: undefined
   }
-
-  export default landingPageObject;

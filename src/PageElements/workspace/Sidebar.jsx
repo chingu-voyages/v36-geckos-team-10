@@ -8,7 +8,7 @@ const Sidebar = ({ handleAdd, toggleModal }) => {
     const dropDownStyle = 'p-16';
 
     return (
-        <aside className="ws-sidebar">
+        <aside className="ws-sidebar h-full flex-1">
                 <Dropdown className={dropDownStyle} items={commonTags} handleAdd={ handleAdd } title='Common Tags' />
                 <Dropdown className={dropDownStyle} items={ semanticTags } handleAdd={ handleAdd } title='Semantic Elements' />
                 <BtnStyled clickFunc={() => {toggleModal[1](!toggleModal[0])}} innerText='Export' />

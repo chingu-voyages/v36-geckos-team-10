@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaRegLaughSquint, FaTimes} from 'react-icons/fa';
 
 export default function Banner() {
+  const [unmounted, setUnmounted] = useState('visible');
+
   return (
-    <div className="bg-indigo-600">
+    <div className={`bg-indigo-600 ${unmounted}`}>
       <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between flex-wrap">
           <div className="w-0 flex-1 flex items-center">
@@ -29,7 +31,7 @@ export default function Banner() {
               className="-mr-1 flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
             >
               <span className="sr-only">Dismiss</span>
-              <FaTimes className="h-6 w-6 text-white" aria-hidden="true" />
+              <FaTimes onClick={() => setUnmounted('invisible')} className="h-6 w-6 text-white" aria-hidden="true" />
             </button>
           </div>
         </div>

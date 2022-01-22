@@ -3,7 +3,7 @@ import { BsFillMoonStarsFill, BsCloudSun } from 'react-icons/bs'
 // import logo from '../assets/logo.jpg';
 import logoAlt from '../assets/logoAlt.jpg'
 import { Link, useLocation } from 'react-router-dom';
-import landingPageObject from '../features/landingPageObject';
+import { landingPageObject } from '../features/landingPageObject';
 
 export const Navbar = () => {
     const [themeIcon, setThemeIcon] = useState(<BsFillMoonStarsFill />);

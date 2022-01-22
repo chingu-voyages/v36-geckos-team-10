@@ -9,16 +9,17 @@ const Builder = ({ buildingBlocks, setBuildingBlocks, changeModal }) => {
     useEffect(() => {
         //sends DOM element to the function
         dragAndDrop(dragParent, changeModal);
-    }, [changeModal]);
+    }, [buildingBlocks, changeModal]);
     return (
-        <main className="ws-builder" ref={dragParent}>
+        <main className="ws-builder h-full p-8 overflow-y-auto" ref={dragParent}>
             {buildingBlocks.map((block, index) => <BuilderComponent 
-                                                key={index} 
-                                                tags={block}
-                                                id={index}
-                                                buildingBlocks={buildingBlocks}
-                                                setBuildingBlocks={setBuildingBlocks}
-                                                />)}
+                                                    key={index} 
+                                                    tags={block}
+                                                    id={index}
+                                                    buildingBlocks={buildingBlocks}
+                                                    setBuildingBlocks={setBuildingBlocks}
+                                                    changeModal={changeModal}
+                                                   />)}
         </main>
     );
 }
