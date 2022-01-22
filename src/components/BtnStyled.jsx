@@ -5,7 +5,7 @@ export const BtnStyled = ({ innerText, clickFunc }) => {
         e.target.addEventListener('mouseout', (e) => {e.target.classList.remove('pressed')})
     }
         return (
-        <button onMouseDown={(e) => clickAnim(e)}  onClick={() => clickFunc()}>
+        <button className="" onMouseDown={(e) => clickAnim(e)}  onClick={() => clickFunc()}>
             {innerText}
         </button>
     );
