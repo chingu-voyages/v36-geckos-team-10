@@ -1,16 +1,15 @@
 {
   "name": "easy-web-builder",
-  "version": "0.1.0",
+  "version": "2.1.4",
   "private": true,
   "dependencies": {
-    "@reduxjs/toolkit": "^1.7.1",
+    "@headlessui/react": "^1.4.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0"
   },
@@ -34,5 +33,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.15"
   }
 }

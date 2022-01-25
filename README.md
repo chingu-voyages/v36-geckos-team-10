@@ -1,4 +1,4 @@
-# Project name TBD
+# EasyWeb Project
 This is initial version of the project's README file.<br>
 As developers, we know how time consuming setting up a new project can be, the aim of our project is to create a tool that would simplify this process for you.
 
@@ -10,12 +10,13 @@ Web developers
 ### Use Cases:
   - Template layout custumization with draggable components.
   - Option to add, remove, duplicate or customise specific components.
+  - Option to choose a color theme.
   - Option to export html/css of a finished template.
 
 ## - FILE STRUCTURE - 
 For now we should only concerne ourselves with the contents of the 'src' folder. I've took the liberty to create couple of subfolders.<br>
- - containers (All statefull components)
- - components (Stateless components)
- - assets (Multimedia)
- - store (Redux)
+ - Pages (All react-router endpoints)
+ - PageElements (Sections of the main pages)
+ - components (Reusable components)
+ - assets (Media)
  - features (Additional JS logic)
