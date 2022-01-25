@@ -1,5 +1,5 @@
 # EasyWeb Project
-Live DEMO: [Link](https://app.netlify.com/teams/timklancisar/overview)<br>
+Live DEMO: [Link](https://easyweb-project.netlify.app)<br><br>
 This is initial version of the project's README file.<br>
 As developers, we know how time consuming setting up a new project can be, the aim of our project is to create a tool that would simplify this process for you.
 
