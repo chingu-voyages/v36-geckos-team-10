@@ -13,19 +13,12 @@ export const ExportModal= ({ changeModal, modalContent }) => {
 ${transformHtml(modalContent).join("\n")}
 </body>`;
 let cssCode = `
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html, body {
-    position: relative;
-    height: 100vh;
-}
 body {
+    margin: 0;
     display: flex;
     flex-direction: column;
-    font-size: 18px;
+    align-items: center;
+    justify-content: center;
 }
 ${transformCss(modalContent).join('\n')}
 `;
